@@ -1,0 +1,17 @@
+{
+  "dependencies": {
+    "node-sass": "^5.0.0",
+    "sass": "^1.32.8"
+  },
+  "scripts": {
+    "bs": "browser-sync start --config bs-config.js",
+    "watch": "node-sass --watch assets/scss/custom.scss -o assets/css --source-map true --output-style compressed",
+    "prefix": "postcss --use autoprefixer -r assets/css/*.css --no-map"
+  },
+  "browserslist": [
+    "last 2 versions",
+    "ie >= 9",
+    "android >= 4.4",
+    "ios >= 7"
+  ]
+}
