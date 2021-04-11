@@ -5,20 +5,12 @@ include_once( get_stylesheet_directory() . '/inc/shortcodes.php' );
 
 ScriptsAndStyles::addThemeScriptsAndStyles();
 
-
-
-//get_footer
-//wp_footer
-//wp_print_footer_scripts
+//is_page()
 
 // Pages where need to show "Time Banner"
 
-add_action( 'wp_footer', 'show_banner');
+add_action( 'before_page_footer', 'show_banner' );
 
-function show_banner(){
-
-    if(is_page()){
-        echo do_shortcode('[show_time_banner]');
-    }
-
+function show_banner() {
+    echo do_shortcode( '[show_time_banner]' );
 }
